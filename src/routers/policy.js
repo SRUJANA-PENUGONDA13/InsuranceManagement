@@ -6,6 +6,10 @@ const policyRouter = new express.Router
 const PolicyDetails = require('../models/policyDetails')
 
 // Storing policy details to database
+policyRouter.get('/',(req,res)=> 
+{
+    res.send("Welcome to Insurance Management API")
+})
 policyRouter.post('/policyDetails', async (req, res)=>
 {
     const policy = PolicyDetails(req.body)
